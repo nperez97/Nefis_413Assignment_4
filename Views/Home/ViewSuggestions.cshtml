@@ -1,0 +1,39 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewData["Title"] = "View Restaurants";
+}
+
+@model IEnumerable<Nefis_413Assignment_4.Models.AddRestaurant>
+<body>
+    <div class="container-fluid">
+        <h1>@ViewData["Title"]</h1>
+        <h2>Here is the list of restaurants</h2>
+        <table class="table table-striped">
+            <thead class="thead-dark">
+                <tr>
+                    <th scope="col">Name</th>
+                    <th scope="col">Restaurant Name</th>
+                    <th scope="col">Favorite Dish</th>
+                    <th scope="col">Restaurant Phone#</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (Nefis_413Assignment_4.Models.AddRestaurant r in Model)
+                {
+                    <tr>
+                        <td>@r.Name</td>
+                        <td>@r.RestaurantName</td>
+                        <td>@r.FavDish</td>
+                        <td>@r.Phone</td>
+                        
+                    </tr>
+
+                }
+            </tbody>
+        </table>
+        <br />
+        <h3><a asp-controller="Home" asp-action="SuggestRestaurant">Click here</a> to add another Suggestion</h3>
+    </div>
+</body>

@@ -1,0 +1,39 @@
+﻿@*
+
+*@
+@{
+    ViewData["Title"] = "Suggest a Restaurant";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+@model Nefis_413Assignment_4.Models.AddRestaurant
+
+<body>
+    <div class="container">
+        <form class="mt-5 ml-5 pt-5 pl-5" asp-action="SuggestRestaurant" method="post">
+            <div class="form-group">
+                <label asp-for="Name">Name</label>
+                <input class="form-control" asp-for="Name" />
+                <span asp-validation-for="Name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="RestaurantName">Restaurant Name</label>
+                <input class="form-control" asp-for="RestaurantName" />
+                <span asp-validation-for="RestaurantName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="FavDish">Favorite Dish</label>
+                <input class="form-control" asp-for="FavDish" />
+                <span asp-validation-for="FavDish" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Phone">Phone Number</label>
+                <input class="form-control" asp-for="Phone" />
+                <span asp-validation-for="Phone" class="text-danger"></span>
+            </div>
+
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+</body>
